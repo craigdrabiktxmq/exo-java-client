@@ -46,7 +46,7 @@ public class SwirldsAdaptor {
 		nodes.add(new InetSocketAddress("hashgraph", 51207));
 		
 		if (SwirldsAdaptor.nodeRouter == null) {
-			SwirldsAdaptor.nodeRouter = new FixedNodeRouter();
+			SwirldsAdaptor.nodeRouter = new RoundRobinNodeRouter();
 			SwirldsAdaptor.nodeRouter.setAvailableNodes(nodes);
 		}
 		
