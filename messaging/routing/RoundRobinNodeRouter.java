@@ -1,4 +1,4 @@
-package com.txmq.exo.exo.messaging.routing;
+package com.txmq.exo.messaging.routing;
 
 import java.net.SocketAddress;
 import java.util.List;
