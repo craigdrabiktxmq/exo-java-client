@@ -45,7 +45,7 @@ You initialize the list of known sockets by defining an exo-config.json file.  T
 In order for deserialization to work properly, your value objects and transaction type classes must match between client and server.  Ensure any value objects that will be transferred between client and server are available to both codebases and are the same structurally.  If you are connecting a JAX-RS API to a Hashgraph, you may strip out the serialization metadata from your value objects if desired.  Be sure you copy the ExoTransactionType subclass that defines the transaction types that your Hashgraph application responds to.
 
 ### Create Authentication Keystores
-TODO
+The [Using JSSE for Secure Socket Communication Tutorial](https://www.ibm.com/developerworks/java/tutorials/j-jsse/j-jsse.html) is an excellent walkthrough of how secure socket communication works in Java.  In order to configure Exo for secure socket communication, we follow the steps under "Key Management" in the tutorial to generate key pairs and keystores for both sides of the socket.  Once you have created your public and private client and server keystores, place client.public and server.private in your Hashgraph project.  Place client.private and server.public in your client application.  In both cases, thse files should be placed in the directory in which your application executes.
 
 ### Use SwirldsAdaptor to Communicate with the Hashgraph
 Use an instance of SwirldsAdaptor to send messages tot he Hashgraph and receive responses.  In the following example we send a transaction of the type "GET_ZOO" with a null payload:
