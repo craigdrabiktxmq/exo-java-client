@@ -31,7 +31,6 @@ import javax.net.ssl.TrustManagerFactory;
 import com.txmq.exo.config.ClientConfig;
 import com.txmq.exo.config.ExoConfig;
 import com.txmq.exo.messaging.routing.*;
-import com.txmq.socketdemo.SocketDemoTransactionTypes;
 
 public class SwirldsAdaptor {
 	
@@ -104,7 +103,7 @@ public class SwirldsAdaptor {
 		}
 	}
 	
-	public ExoMessage sendTransaction(SocketDemoTransactionTypes transactionType, Serializable payload) {
+	public ExoMessage sendTransaction(ExoTransactionType transactionType, Serializable payload) {
 		if (this.socket == null) {
 			throw new IllegalStateException("A socket has not been created");
 		}
