@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.txmq.exo</groupId>
+	<artifactId>exo-java-client</artifactId>
+	<version>0.5.0</version>
+	<name>Exo Java Client</name>
+	<url>https://github.com/craigdrabiktxmq/exo-java-client/</url>
+	<description>The Exo Java Client library works with the Exo framework for Hashgraph-based application development to facilitate socket-based communication between a Java client application and a running Hashgraph. Transactions or messages are exchanged between client and server via a TLS-encrypted socket authenticated using X.509 certificates.</description>
+	<scm>
+		<url>https://github.com/craigdrabiktxmq/exo-java-client/</url>
+		<developerConnection>TxMQ, Inc</developerConnection>
+	</scm>
+	<build>
+		<sourceDirectory>src</sourceDirectory></build>
+	<dependencies>
+		<dependency>
+	      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+	      <artifactId>jackson-jaxrs-json-provider</artifactId>
+	      <version>${jackson-version}</version>
+	    </dependency>
+    </dependencies>
+    <properties>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <jackson-version>2.8.9</jackson-version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- 
+    <junit-version>4.12</junit-version>
+    <logback-version>1.1.7</logback-version>
+    <servlet-api-version>2.5</servlet-api-version>
+    <swagger-core-version>1.5.15</swagger-core-version>
+    <jetty-version>9.2.9.v20150224</jetty-version>
+    <jersey2-version>2.22.2</jersey2-version>
+     -->
+  </properties>
+</project>
